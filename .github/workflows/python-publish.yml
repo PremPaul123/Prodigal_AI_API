@@ -38,6 +38,6 @@ jobs:
     - name: Publish package
       env:
         TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.Prodigal_API_Upload}}
+        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN}}
       run: |
         twine upload dist/*
