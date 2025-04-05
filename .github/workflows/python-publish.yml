@@ -35,9 +35,9 @@ jobs:
       run: |
         python setup.py sdist bdist_wheel
 
-    - name: Publish package to PyPI
+    - name: Publish package
       env:
         TWINE_USERNAME: __token__
-        TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        TWINE_PASSWORD: ${{ secrets.Prodigal_API_Upload}}
       run: |
         twine upload dist/*
